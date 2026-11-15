@@ -1,0 +1,8 @@
+# Godot
+.godot/
+*.import.tmp
+export_credentials.cfg
+# Respaldos de trabajo (no van al repo)
+_to_delete/
+# Node (servidor de la versión web)
+deploy/node_modules/

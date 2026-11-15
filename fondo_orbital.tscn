@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://cw6rpg2tir5ij"]
+
+[ext_resource type="Texture2D" uid="uid://dmjgbmlnm4fd7" path="res://preview.webp" id="1_2ux8u"]
+[ext_resource type="Texture2D" uid="uid://n87jn5wj1l27" path="res://Moon - Southern Sea.jpg" id="2_jmwqt"]
+[ext_resource type="Texture2D" uid="uid://cr51paavprtco" path="res://Jupiter.jpg" id="3_2yjet"]
+[ext_resource type="Texture2D" uid="uid://wt78im23u34o" path="res://Mars.jpg" id="4_3tto5"]
+
+[sub_resource type="Environment" id="Environment_htfjg"]
+background_mode = 1
+background_color = Color(0.019607844, 0.02745098, 0.05490196, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_htfjg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nyuvh"]
+albedo_texture = ExtResource("1_2ux8u")
+
+[sub_resource type="SphereMesh" id="SphereMesh_e8puf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eh3dx"]
+albedo_texture = ExtResource("2_jmwqt")
+
+[sub_resource type="SphereMesh" id="SphereMesh_i20ue"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_we76v"]
+albedo_texture = ExtResource("3_2yjet")
+
+[sub_resource type="SphereMesh" id="SphereMesh_45hk0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tx344"]
+albedo_color = Color(0.9607843, 0.61960787, 0.043137256, 1)
+emission_enabled = true
+emission = Color(1, 0.61960787, 0.17254902, 1)
+emission_energy_multiplier = 2.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_dh6j4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ab28f"]
+albedo_texture = ExtResource("4_3tto5")
+
+[node name="FondoOrbital3D" type="Node3D" unique_id=1970869093]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1284899137]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=284428545]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 35, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1448108343]
+environment = SubResource("Environment_htfjg")
+
+[node name="AstroTierra" type="MeshInstance3D" parent="." unique_id=1816773951]
+mesh = SubResource("SphereMesh_htfjg")
+surface_material_override/0 = SubResource("StandardMaterial3D_nyuvh")
+
+[node name="AstroLuna" type="MeshInstance3D" parent="." unique_id=1286466424]
+visible = false
+mesh = SubResource("SphereMesh_e8puf")
+surface_material_override/0 = SubResource("StandardMaterial3D_eh3dx")
+
+[node name="AstroJupiter" type="MeshInstance3D" parent="." unique_id=597103024]
+visible = false
+mesh = SubResource("SphereMesh_i20ue")
+surface_material_override/0 = SubResource("StandardMaterial3D_we76v")
+
+[node name="AstroSol" type="MeshInstance3D" parent="." unique_id=1742012808]
+visible = false
+mesh = SubResource("SphereMesh_45hk0")
+surface_material_override/0 = SubResource("StandardMaterial3D_tx344")
+
+[node name="AstroMarte" type="MeshInstance3D" parent="." unique_id=595326008]
+visible = false
+mesh = SubResource("SphereMesh_dh6j4")
+surface_material_override/0 = SubResource("StandardMaterial3D_ab28f")

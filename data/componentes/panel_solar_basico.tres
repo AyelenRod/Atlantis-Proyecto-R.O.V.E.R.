@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ComponentData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/component_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "panel_solar_basico"
+nombre = "Panel solar básico"
+categoria = "energia"
+masa_kg = 5.0
+energia_w = 40.0
+costo = 20.0
+datos_mbps = 0.0
+riesgo_falla = 0.05
+descripcion = "Genera energía a partir de la luz del Sol. Ejemplo: copia este archivo para crear más piezas."
