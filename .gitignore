@@ -6,3 +6,5 @@ export_credentials.cfg
 _to_delete/
 # Node (servidor de la versión web)
 deploy/node_modules/
+
+node_modules/

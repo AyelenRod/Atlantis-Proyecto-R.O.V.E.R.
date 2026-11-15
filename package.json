@@ -1,0 +1,11 @@
+{
+  "name": "mision-espacial",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Misión Espacial (Polipops) - sirve la versión web exportada desde Godot (deploy/web).",
+  "scripts": {
+    "start": "node deploy/server.js"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": { "express": "^4.19.2" }
+}
